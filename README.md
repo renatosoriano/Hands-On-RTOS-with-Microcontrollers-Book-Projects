@@ -32,7 +32,7 @@ Here is his [**GitHub Repo**](https://github.com/jimyuill/embedded-systems-proje
 
 ## Fixes
 You can find here the most important fixes that need to be applied for running /debugging the applications the most simple way.
-For full details and alternatives please refere to the links above in the nOTES section.
+For full details and alternatives please refere to the links above in the Notes section.
 
 * #### jdebug files fixes for running correctly Ozone debugger and SystemView tool.
     After building the project and source files with STM32Cube IDE, we need to make use of the .jdebug files provided by the author in order to be capable or flashing the board with Ozone as well as for debugging. However the author left some lines of codes that doesn't have the right attribute/settings or that contain paths making reference to IDE tools no longer available that need to be replaced.
