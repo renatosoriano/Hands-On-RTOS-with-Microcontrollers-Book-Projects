@@ -1,4 +1,4 @@
-# Hands-On-RTOS-with-Microcontrollers-Book-Projects
+# Hands-On RTOS with Microcontrollers Book Projects
 
 This repo contains projects, updates code, notes, fixes and results for the book "[Hands-On RTOS with Microcontrollers](https://www.packtpub.com/product/hands-on-rtos-with-microcontrollers/9781838826734)" by Brian Amos and published by Packt.
 
@@ -17,7 +17,7 @@ The book will then help you develop highly efficient low-level drivers and analy
 **[STM32 Nucleo-F767ZI Development Board](https://www.st.com/en/evaluation-tools/nucleo-f767zi.html#overview)** - Board used in this course. \
 **[Eclipse-based STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)** - C/C++ development platform with peripheral configuration, code generation, code compilation, and debug features for STM32 microcontrollers and microprocessors. Works on Windows/Linux/Mac and is free. \
 **[SEGGER SystemView](https://www.segger.com/products/development-tools/systemview/)** - Real-time recording and visualization tool for embedded systems. It reveals the true runtime behavior of an application, going far deeper than the system insights provided by debuggers. This is particularly effective when developing and working with complex embedded systems comprising multiple threads and interrupts. Works on Windows/Linux/Mac and is free. \
-**[SEGGER Ozone](https://www.segger.com/products/development-tools/systemview/)** - Full-featured graphical debugger for embedded applications. It is possible to debug any embedded application on C/C++ source and assembly level, as well as loading applications built with any tool chain / IDE or debug the target's resident application without any source. Ozone includes all well-known debug controls and information windows and makes use of the best performance of J-Link and J-Trace debug probes. Works on Windows/Linux/Mac and is free. \
+**[SEGGER Ozone](https://www.segger.com/products/development-tools/ozone-j-link-debugger/)** - Full-featured graphical debugger for embedded applications. It is possible to debug any embedded application on C/C++ source and assembly level, as well as loading applications built with any tool chain / IDE or debug the target's resident application without any source. Ozone includes all well-known debug controls and information windows and makes use of the best performance of J-Link and J-Trace debug probes. Works on Windows/Linux/Mac and is free. \
 
 ## Notes
 
@@ -36,7 +36,7 @@ For full details and alternatives please refere to the links above in the nOTES 
 
 * #### jdebug files fixes for running correctly Ozone debugger and SystemView tool.
     After building the project and source files with STM32Cube IDE, we need to make use of the .jdebug files provided by the author in order to be capable or flashing the board with Ozone as well as for debugging. However the author left some lines of codes that doesn't have the right attribute/settings or that contain paths making reference to IDE tools no longer available that need to be replaced.
-  * The line of code with `Project.SetTargetIF ("JTAG");` needs to be changed with `Project.SetTargetIF ("SWD");`.
+  * The line of code with `Project.SetTargetIF ("JTAG");` needs to be changed for `Project.SetTargetIF ("SWD");`.
   * For the AddSvdFile settings, the author used an IDE that is not used in the book, instead we use STM32CubeIDE and thus the .svd file for the STM32F767 microcontroller is found in other path. Replace `Project.AddSvdFile ("C:\Program Files (x86)\Atollic\TrueSTUDIO for STM32 9.3.0\ide\plugins\com.atollic.truestudio.tsp.stm32_1.0.0.20190212-0734\tsp\sfr\STM32F7x7.svd");` with the coresponding path for STM32CubeIDE, depending if you are using Windows or MacOS might look something like this:
     * For Windows: `Project.AddSvdFile ("C:\ST\STM32CubeIDE_1.5.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.productdb.debug_1.5.0.202011051456\resources\cmsis\STMicroelectronics_CMSIS_SVD\STM32F767.svd");`.
     * For MacOS: `Project.AddSvdFile ("/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.productdb.debug_2.1.100.202311191741/resources/cmsis/STMicroelectronics_CMSIS_SVD/STM32F767.svd");`.
