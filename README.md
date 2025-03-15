@@ -4,7 +4,11 @@ This repo contains projects, updates code, notes, fixes and results for the book
 
 Date: March, 2024.
 
-- The [**SystemView Recordings .SVDat and Image Outputs**](https://github.com/renatosoriano/Hands-On-RTOS-with-Microcontrollers-Book-Projects/blob/main/Target_Workspace/Results) are available. 
+- The [**SystemView Recordings (.SVDat) and Image Outputs per Chapter**](https://github.com/renatosoriano/Hands-On-RTOS-with-Microcontrollers-Book-Projects/blob/main/Target_Workspace/Results) are available. 
+
+- The [**Coding Exercises**](https://github.com/renatosoriano/Hands-On-RTOS-with-Microcontrollers-Book-Projects/tree/main/Target_Workspace/RTOS_workspace) are available. 
+
+- The [**Output Results**](#exercises-outputs) are available. 
 
 ## Description from the author
 
@@ -17,7 +21,7 @@ The book will then help you develop highly efficient low-level drivers and analy
 **[STM32 Nucleo-F767ZI Development Board](https://www.st.com/en/evaluation-tools/nucleo-f767zi.html#overview)** - Board used in this course. \
 **[Eclipse-based STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html)** - C/C++ development platform with peripheral configuration, code generation, code compilation, and debug features for STM32 microcontrollers and microprocessors. Works on Windows/Linux/Mac and is free. \
 **[SEGGER SystemView](https://www.segger.com/products/development-tools/systemview/)** - Real-time recording and visualization tool for embedded systems. It reveals the true runtime behavior of an application, going far deeper than the system insights provided by debuggers. This is particularly effective when developing and working with complex embedded systems comprising multiple threads and interrupts. Works on Windows/Linux/Mac and is free. \
-**[SEGGER Ozone](https://www.segger.com/products/development-tools/ozone-j-link-debugger/)** - Full-featured graphical debugger for embedded applications. It is possible to debug any embedded application on C/C++ source and assembly level, as well as loading applications built with any tool chain / IDE or debug the target's resident application without any source. Ozone includes all well-known debug controls and information windows and makes use of the best performance of J-Link and J-Trace debug probes. Works on Windows/Linux/Mac and is free. \
+**[SEGGER Ozone](https://www.segger.com/products/development-tools/ozone-j-link-debugger/)** - Full-featured graphical debugger for embedded applications. It is possible to debug any embedded application on C/C++ source and assembly level, as well as loading applications built with any tool chain / IDE or debug the target's resident application without any source. Ozone includes all well-known debug controls and information windows and makes use of the best performance of J-Link and J-Trace debug probes. Works on Windows/Linux/Mac and is free. 
 
 ## Notes
 
@@ -82,19 +86,19 @@ Project.SetOSPlugin("FreeRTOSPlugin_CM7");
   * Don't run an Ozone debug-session when SystemView is recording. If it is running, it can be stopped by clicking on: `Debug: Stop Debug Session`. Ozone itself can then be closed or left open.
   * In each .jdebug file for Ozone, disable RTT in code settings by adding this line to the *.jdebug file: `Project.SetRTT(0);`.
 
-## Results
+## Exercises Outputs
 
-## Chapter 5 'Selecting an IDE' & Chapter 6 'Debbuging Tools for Real-Time Systems':
+### Chapter 5 'Selecting an IDE' & Chapter 6 'Debbuging Tools for Real-Time Systems':
 
 ![Chapter5_6.png](https://github.com/renatosoriano/Hands-On-RTOS-with-Microcontrollers-Book-Projects/blob/main/Target_Workspace/Results/Chapter5_6/Outputs/Chapter5_6.png)
 
-## Chapter 7 'The FreeRTOS Scheduler':
+### Chapter 7 'The FreeRTOS Scheduler':
 
 `Chapter7_main_taskCreation`:
 
 ![Chapter7_main_taskCreation.png](https://github.com/renatosoriano/Hands-On-RTOS-with-Microcontrollers-Book-Projects/blob/main/Target_Workspace/Results/Chapter7/Outputs/Chapter7_main_taskCreation.png)
 
-## Chapter 8 'Protecting Data and Synchronizing Tasks':
+### Chapter 8 'Protecting Data and Synchronizing Tasks':
 
 `Chapter8_mainSemExample_1`:
 
@@ -128,7 +132,7 @@ Project.SetOSPlugin("FreeRTOSPlugin_CM7");
 
 ![Chapter8_mainSoftwareTimers.png](https://github.com/renatosoriano/Hands-On-RTOS-with-Microcontrollers-Book-Projects/blob/main/Target_Workspace/Results/Chapter8/Outputs/Chapter8_mainSoftwareTimers.png)
 
-## Chapter 9 'Intertask Communication':
+### Chapter 9 'Intertask Communication':
 
 `Chapter9_mainQueueSimplePassByValue`:
 
@@ -155,7 +159,7 @@ Project.SetOSPlugin("FreeRTOSPlugin_CM7");
 ![Chapter9_mainTaskNotifications.png](https://github.com/renatosoriano/Hands-On-RTOS-with-Microcontrollers-Book-Projects/blob/main/Target_Workspace/Results/Chapter9/Outputs/Chapter9_mainTaskNotifications.png)
 
 
-## Chapter 10 'Drivers and ISRs':
+### Chapter 10 'Drivers and ISRs':
 
 `Chapter10_mainUartDMABuff_1`:
 
